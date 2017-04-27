@@ -1,0 +1,19 @@
+{
+  "name": "captionbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "neetu",
+  "license": "ISC",
+  "dependencies": {
+    "botbuilder": "^3.7.0",
+    "needle": "^1.6.0",
+    "request": "^2.81.0",
+    "restify": "^4.3.0",
+    "url": "^0.11.0",
+    "valid-url": "^1.0.9"
+  }
+}
