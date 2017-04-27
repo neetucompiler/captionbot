@@ -2,7 +2,7 @@
 
 var request = require('request').defaults({ encoding: null });
 
-var VISION_URL = 'https://eastus2.api.cognitive.microsoft.com/vision/v1.0/analyze?visualFeatures=Faces&language=en&';
+var VISION_URL = 'https://eastus2.api.cognitive.microsoft.com/vision/v1.0/analyze?visualFeatures=Faces&language=en';
 
 /** 
  *  Gets the caption of the image from an image stream
@@ -16,7 +16,8 @@ module.exports.getCaptionFromStream = function (stream) {
                 url: VISION_URL,
                 encoding: 'binary',
                 headers: { 'content-type': 'application/octet-stream',
-                            'Ocp-Apim-Subscription-Key': '1ab0cd9b2fb94de4b84b9a14fd7f8c0f'
+                'Host' : 'eastus2.api.cognitive.microsoft.com',
+                'Ocp-Apim-Subscription-Key': '1ab0cd9b2fb94de4b84b9a14fd7f8c0f'
                 }
             };
 
