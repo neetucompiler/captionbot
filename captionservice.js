@@ -16,7 +16,7 @@ module.exports.getCaptionFromStream = function (stream) {
                 url: VISION_URL,
                 encoding: 'binary',
                 headers: { 'content-type': 'application/octet-stream',
-                            'Ocp-Apim-Subscription-Key': process.env.MICROSOFT_VISION_API_KEY
+                            'Ocp-Apim-Subscription-Key': '1ab0cd9b2fb94de4b84b9a14fd7f8c0f'
                 }
             };
 
