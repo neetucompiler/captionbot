@@ -9,7 +9,7 @@ var VISION_URL = 'https://eastus2.api.cognitive.microsoft.com/vision/v1.0/analyz
  * @param {stream} stream The stream to an image.
  * @return {Promise} Promise with caption string if succeeded, error otherwise
  */
-exports.getCaptionFromStream = function (stream) {
+module.exports.getCaptionFromStream = function (stream) {
     return new Promise(
         function (resolve, reject) {
             var requestData = {
@@ -40,7 +40,7 @@ exports.getCaptionFromStream = function (stream) {
  * @param {string} url The URL to an image.
  * @return {Promise} Promise with caption string if succeeded, error otherwise
  */
-exports.getCaptionFromUrl = function (url) {
+module.exports.getCaptionFromUrl = function (url) {
     return new Promise(
         function (resolve, reject) {
             var requestData = {
