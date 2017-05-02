@@ -40,7 +40,7 @@ module.exports.getCaptionFromStream = function (stream) {
  * @param {string} url The URL to an image.
  * @return {Promise} Promise with caption string if succeeded, error otherwise
  */
-module.exports.getCaptionFromUrl = function (url) {
+module.exports.getCaptionFromUrl = function (myurl) {
     return new Promise(
         function (resolve, reject) {
             var requestData = {
@@ -49,7 +49,7 @@ module.exports.getCaptionFromUrl = function (url) {
                 'content-type': 'application/json',
                 'Ocp-Apim-Subscription-Key': '1ab0cd9b2fb94de4b84b9a14fd7f8c0f'
                 },
-                data: JSON.stringify({ 'url': url })
+                json: JSON.stringify({ url: myurl })
             };
 
             request.post(requestData, function (error, response, body) {
