@@ -63,7 +63,8 @@ module.exports.getCaptionFromUrl = function (myurl) {
                 else {
                     console.log("body "+body);
                     console.log("response "+response);
-                    resolve(extractCaption(body));
+                    console.log("check method::::::"+extractCaption(JSON.parse(body)))
+                    resolve(extractCaption(JSON.parse(body)));
                 }
             });
         }
@@ -77,7 +78,7 @@ module.exports.getCaptionFromUrl = function (myurl) {
  */
 function extractCaption(body) {
     if (body && body.description && body.description.captions && body.description.captions.length) {
-        console.log(body.description.captions[0]);
+        console.log(body.description.captions[0])
         return body.description.captions[0].text;
     }
 
