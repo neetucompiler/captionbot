@@ -49,7 +49,7 @@ module.exports.getCaptionFromUrl = function (myurl) {
                 'content-type': 'application/json',
                 'Ocp-Apim-Subscription-Key': '1ab0cd9b2fb94de4b84b9a14fd7f8c0f'
                 },
-                data: JSON.stringify({text:myurl})
+                body: JSON.stringify({url:"https://nameberry.com/blog/wp-content/uploads/2016/10/shutterstock_464300804-776x600.jpg"})
             };
 
             request.post(requestData, function (error, response, body) {
