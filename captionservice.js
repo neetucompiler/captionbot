@@ -55,11 +55,14 @@ module.exports.getCaptionFromUrl = function (myurl) {
             request.post(requestData, function (error, response, body) {
                 if (error) {
                     reject(error);
+
                 }
                 else if (response.statusCode !== 200) {
                     reject(body);
                 }
                 else {
+                    console.log("body "+body);
+                    console.log("response "+response);
                     resolve(extractCaption(body));
                 }
             });
