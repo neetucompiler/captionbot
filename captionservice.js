@@ -2,7 +2,7 @@
 
 var request = require('request').defaults({ encoding: null });
 
-var VISION_URL = 'https://eastus2.api.cognitive.microsoft.com/vision/v1.0/analyze?visualFeatures=Faces&language=en';
+var VISION_URL = 'https://eastus2.api.cognitive.microsoft.com/vision/v1.0/analyze?visualFeatures=Description&language=en';
 /** 
  *  Gets the caption of the image from an image stream
  * @param {stream} stream The stream to an image.
