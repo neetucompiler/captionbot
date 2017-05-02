@@ -77,6 +77,7 @@ module.exports.getCaptionFromUrl = function (myurl) {
  */
 function extractCaption(body) {
     if (body && body.description && body.description.captions && body.description.captions.length) {
+        console.log(body.description.captions[0]);
         return body.description.captions[0].text;
     }
 
