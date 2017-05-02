@@ -49,7 +49,7 @@ module.exports.getCaptionFromUrl = function (myurl) {
                 'content-type': 'application/json',
                 'Ocp-Apim-Subscription-Key': '1ab0cd9b2fb94de4b84b9a14fd7f8c0f'
                 },
-                json: JSON.stringify({ url: myurl })
+                text: myurl
             };
 
             request.post(requestData, function (error, response, body) {
